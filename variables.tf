@@ -19,3 +19,4 @@ variable "my_public_subnet" {
   description = "The public network to allow access to the instance"
   type        = string
 }
+

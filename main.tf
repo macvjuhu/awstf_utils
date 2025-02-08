@@ -196,3 +196,20 @@ resource "aws_instance" "studentperf" {
   }
 }
 
+resource "aws_ecr_repository" "dev_ecr_repo" {
+  name = "dev-ecr-repo"
+
+  image_scanning_configuration {
+    scan_on_push = true
+  }
+
+  tags = {
+    Name = "Dev ECR Repository"
+  }
+}
+
+output "ecr_repository_url" {
+  value       = aws_ecr_repository.dev_ecr_repo.repository_url
+  description = "URL of the ECR repository"
+}
+
