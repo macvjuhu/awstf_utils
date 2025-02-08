@@ -25,7 +25,7 @@ resource "aws_security_group" "default_sg" {
 
 resource "aws_vpc_security_group_ingress_rule" "allow_tls_ipv4" {
   security_group_id = aws_security_group.default_sg.id
-  cidr_ipv4         = "72.163.220.0/24"
+  cidr_ipv4         = var.my_public_subnet
   from_port         = 443
   to_port           = 443
   ip_protocol       = "tcp"

@@ -15,7 +15,7 @@ variable "keypair_name" {
   type        = string
 }
 
-variable "my_public_network" {
+variable "my_public_subnet" {
   description = "The public network to allow access to the instance"
   type        = string
 }
