@@ -120,6 +120,10 @@ resource "aws_iam_role" "ec2_role" {
       }
     ]
   })
+
+  tags = {
+    SessionManagerRunAs = "ubuntu"
+  }
 }
 
 resource "aws_iam_role_policy" "AWSVSCodeRemoteConnect" {
