@@ -14,3 +14,8 @@ variable "keypair_name" {
   description = "The name of the keypair to use for the instance"
   type        = string
 }
+
+variable "my_public_network" {
+  description = "The public network to allow access to the instance"
+  type        = string
+}
