@@ -1,6 +1,7 @@
 variable "ami_id" {
   description = "The AMI ID to use for the instance"
   type        = string
+  default     = "ami-04b4f1a9cf54c11d0"
 }
 
 variable "instance_type" {
@@ -9,7 +10,7 @@ variable "instance_type" {
   default     = "t2.micro"
 }
 
-variable "security_group_name" {
-  description = "The name of the existing security group"
+variable "keypair_name" {
+  description = "The name of the keypair to use for the instance"
   type        = string
 }
