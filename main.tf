@@ -208,8 +208,3 @@ resource "aws_ecr_repository" "dev_ecr_repo" {
   }
 }
 
-output "ecr_repository_url" {
-  value       = aws_ecr_repository.dev_ecr_repo.repository_url
-  description = "URL of the ECR repository"
-}
-

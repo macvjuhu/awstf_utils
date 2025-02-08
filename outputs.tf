@@ -9,3 +9,9 @@ output "instance_public_ip" {
   value       = aws_instance.example.public_ip
 }
 */
+
+output "ecr_repository_url" {
+  value       = aws_ecr_repository.dev_ecr_repo.repository_url
+  description = "URL of the ECR repository"
+}
+
